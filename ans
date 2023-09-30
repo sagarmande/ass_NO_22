@@ -1,0 +1,58 @@
+Q1. **Benefits of the Built-in `array` Package**:
+   - The built-in `array` package in Python provides a more memory-efficient alternative to lists for storing homogeneous data types (e.g., integers or floating-point numbers).
+   - It allows you to create arrays with fixed data types, which can enhance performance for numerical operations.
+   - It provides basic array manipulation functions like indexing, slicing, and iteration.
+
+Q2. **Limitations of the `array` Package**:
+   - The `array` package is limited in functionality compared to more advanced libraries like NumPy.
+   - It doesn't offer a comprehensive set of mathematical and array manipulation functions.
+   - It lacks the ability to perform element-wise operations easily.
+
+Q3. **Differences Between `array` and `numpy` Packages**:
+   - `array` is a basic package in Python's standard library for creating and manipulating arrays of fixed data types.
+   - NumPy (`numpy`) is a third-party library that provides a powerful and efficient multi-dimensional array object (`numpy.ndarray`) with a wide range of mathematical and array manipulation functions.
+   - NumPy is highly optimized for numerical and scientific computing, while `array` is more limited in functionality.
+
+Q4. **Distinctions Between `empty`, `ones`, and `zeros` Functions**:
+   - `empty(shape, dtype)`: Creates an uninitialized array with the specified shape and data type. The array's values are not initialized and may contain arbitrary data.
+   - `ones(shape, dtype)`: Creates an array filled with ones with the specified shape and data type.
+   - `zeros(shape, dtype)`: Creates an array filled with zeros with the specified shape and data type.
+
+Q5. **Role of the `callable` Argument in `fromfunction`**:
+   - In the `numpy.fromfunction` function, the `callable` argument is a function that is used to compute the values of the elements in the resulting array. It defines a rule for generating values based on the indices of the elements.
+
+Q6. **Combining a NumPy Array with a Scalar**:
+   - When a NumPy array is combined with a scalar operand through addition (e.g., `A + n`), the scalar is broadcast to match the shape of the array, and the addition operation is applied element-wise. Each element of the array is incremented by the scalar value.
+
+Q7. **Array-to-Scalar Operations with Combined Operation-Assign Operators**:
+   - Yes, array-to-scalar operations can use combined operation-assign operators like `+=` or `*=`. The outcome is that the operation is applied element-wise to the array, modifying its elements in place.
+
+Q8. **NumPy Array and Fixed-Length Strings**:
+   - Yes, a NumPy array can contain fixed-length strings. When you allocate a longer string to an array with fixed-length strings, the longer string is truncated to fit the specified length.
+
+Q9. **Combining Two NumPy Arrays**:
+   - When you combine two NumPy arrays using an operation like addition (+) or multiplication (*), the operation is applied element-wise. The arrays must have compatible shapes, meaning they should have the same shape or be broadcastable to a common shape.
+
+Q10. **Using a Boolean Array to Mask Another Array**:
+    - To use a Boolean array as a mask on another array, you can index the target array with the Boolean array. This selects elements from the target array where the corresponding Boolean values are `True` in the mask.
+
+Q11. **Three Ways to Calculate Standard Deviation**:
+    1. Using the built-in `statistics` module:
+       ```python
+       import statistics
+       stddev = statistics.stdev(data)
+       ```
+    2. Using the NumPy library:
+       ```python
+       import numpy as np
+       stddev = np.std(data)
+       ```
+    3. Using the pandas library (if data is in a DataFrame):
+       ```python
+       import pandas as pd
+       stddev = df['column_name'].std()
+       ```
+    - NumPy is generally the fastest for large datasets due to its optimized implementation.
+
+Q12. **Dimensionality of a Boolean Mask-Generated Array**:
+    - The dimensionality of a Boolean mask-generated array is the same as the dimensionality of the original array being masked. It retains the same number of dimensions, but its shape may change depending on the Boolean mask's shape and broadcasting rules.
